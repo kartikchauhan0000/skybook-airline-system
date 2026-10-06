@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: skybook-backend
+    env: docker
+    rootDir: skybook-airline-backend
+    dockerfilePath: ./skybook-airline-backend/Dockerfile
