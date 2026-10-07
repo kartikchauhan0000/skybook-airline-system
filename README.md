@@ -1,8 +1,5 @@
 ## 🌐 Live Demo
 
-- Frontend: https://skybook02.vercel.app/
-- Backend API: https://skybook-airline.onrender.com
-
 
 # ✈️ SkyBook Airline Reservation System
 
@@ -103,7 +100,7 @@ skybook-airline-system
 ### Clone Repository
 
 ```bash
-git clone https://github.com/Sanwariya-Sukhwal/skybook-airline-system.git
+git clone https://github.com/kartikchauhan0000/skybook-airline-system
 cd skybook-airline-system
 ```
 
@@ -310,13 +307,12 @@ My Bookings
 
 ## 👨‍💻 Author
 
-**Sanwariya Lal Sukhwal**
+**Kartik Chauhan**
 
 Java Full Stack Developer
 
 GitHub:
-https://github.com/Sanwariya-Sukhwal
+https://github.com/kartikchauhan0000/skybook-airline-system
 
-Live Demo:
-https://skybook02.vercel.app/
+
 
