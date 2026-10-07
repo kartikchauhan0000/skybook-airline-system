@@ -1,3 +1,4 @@
+
 package com.skybook.config;
 
 import org.springframework.context.annotation.Bean;
@@ -13,8 +14,11 @@ public class CorsConfig {
 
         CorsConfiguration config = new CorsConfiguration();
 
+        // Local frontend
         config.addAllowedOrigin("http://localhost:5173");
-        config.addAllowedOrigin("https://skybook02.vercel.app");
+
+        // Live Vercel frontend
+        config.addAllowedOrigin("https://skybook-airline-system-nine.vercel.app");
 
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
@@ -28,3 +32,4 @@ public class CorsConfig {
         return new CorsFilter(source);
     }
 }
+
