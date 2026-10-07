@@ -1,3 +1,4 @@
+
 package com.skybook.config;
 
 import lombok.RequiredArgsConstructor;
@@ -34,7 +35,7 @@ public class SecurityConfig {
 
         configuration.setAllowedOrigins(List.of(
                 "http://localhost:5173",
-                "https://skybook02.vercel.app"
+                "https://skybook-airline-system-nine.vercel.app"
         ));
 
         configuration.setAllowedMethods(List.of(
@@ -79,10 +80,7 @@ public class SecurityConfig {
                         .requestMatchers("/auth/**")
                         .permitAll()
 
-                        // =========================
-                        // FLIGHT APIs (ADMIN ONLY)
-                        // =========================
-
+                        // FLIGHT APIs - ADMIN ONLY
                         .requestMatchers(
                                 HttpMethod.POST,
                                 "/flights/**"
@@ -108,20 +106,11 @@ public class SecurityConfig {
                         )
                         .permitAll()
 
-                        // =========================
                         // PASSENGER APIs
-                        // =========================
-
                         .requestMatchers("/passengers/**")
-                        .hasAnyAuthority(
-                                "USER",
-                                "ADMIN"
-                        )
+                        .hasAnyAuthority("USER", "ADMIN")
 
-                        // =========================
                         // ADMIN BOOKING APIs
-                        // =========================
-
                         .requestMatchers(
                                 HttpMethod.GET,
                                 "/bookings"
@@ -134,40 +123,25 @@ public class SecurityConfig {
                         )
                         .hasAuthority("ADMIN")
 
-                        // =========================
                         // USER BOOKING APIs
-                        // =========================
-
                         .requestMatchers(
                                 HttpMethod.POST,
                                 "/bookings"
                         )
-                        .hasAnyAuthority(
-                                "USER",
-                                "ADMIN"
-                        )
+                        .hasAnyAuthority("USER", "ADMIN")
 
                         .requestMatchers(
                                 HttpMethod.DELETE,
                                 "/bookings/**"
                         )
-                        .hasAnyAuthority(
-                                "USER",
-                                "ADMIN"
-                        )
+                        .hasAnyAuthority("USER", "ADMIN")
 
                         .requestMatchers(
                                 "/bookings/flight/**"
                         )
-                        .hasAnyAuthority(
-                                "USER",
-                                "ADMIN"
-                        )
+                        .hasAnyAuthority("USER", "ADMIN")
 
-                        // =========================
                         // PAYMENT APIs
-                        // =========================
-
                         .requestMatchers(
                                 "/payments/status/**"
                         )
@@ -177,18 +151,12 @@ public class SecurityConfig {
                                 HttpMethod.POST,
                                 "/payments"
                         )
-                        .hasAnyAuthority(
-                                "USER",
-                                "ADMIN"
-                        )
+                        .hasAnyAuthority("USER", "ADMIN")
 
                         .requestMatchers(
                                 "/payments/booking/**"
                         )
-                        .hasAnyAuthority(
-                                "USER",
-                                "ADMIN"
-                        )
+                        .hasAnyAuthority("USER", "ADMIN")
 
                         .anyRequest()
                         .authenticated()
@@ -202,3 +170,4 @@ public class SecurityConfig {
         return http.build();
     }
 }
+
