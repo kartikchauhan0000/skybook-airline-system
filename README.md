@@ -1,9 +1,12 @@
 ## 🌐 Live Demo
 
+🚀 **Live Application:** https://skybook-airline-system-nine.vercel.app/
+
+⚙️ **Backend API:** https://skybook-airline-system-cs1k.onrender.com/
 
 # ✈️ SkyBook Airline Reservation System
 
-A full-stack Airline Reservation System built using Spring Boot, React.js, PostgreSQL, JWT Authentication, and Role-Based Authorization.
+A full-stack Airline Reservation System built using **Java, Spring Boot, React.js, PostgreSQL, JWT Authentication, and Role-Based Authorization**.
 
 ---
 
@@ -45,14 +48,16 @@ A full-stack Airline Reservation System built using Spring Boot, React.js, Postg
 
 ### Backend
 
-* Java 17
-* Spring Boot
+* Java 21
+* Spring Boot 3.3.0
 * Spring Security
 * Spring Data JPA
+* Hibernate
 * JWT Authentication
 * PostgreSQL
 * Maven
 * Lombok
+* REST APIs
 
 ### Frontend
 
@@ -83,16 +88,21 @@ skybook-airline-system
 ## 📸 Screenshots
 
 ### Home Page
+
 <img src="screenshots/home.png" width="1000">
 
 ### Flights Page
+
 <img src="screenshots/flights.png" width="1000">
 
 ### Admin Dashboard
+
 <img src="screenshots/admin-dashboard.png" width="1000">
 
 ### Booking Confirmation
+
 <img src="screenshots/booking-success.png" width="1000">
+
 ---
 
 ## ⚙️ Backend Setup
@@ -100,7 +110,8 @@ skybook-airline-system
 ### Clone Repository
 
 ```bash
-git clone https://github.com/kartikchauhan0000/skybook-airline-system
+git clone https://github.com/kartikchauhan0000/skybook-airline-system.git
+
 cd skybook-airline-system
 ```
 
@@ -124,7 +135,6 @@ Update `application.properties`
 spring.datasource.url=jdbc:postgresql://localhost:5432/skybook
 spring.datasource.username=postgres
 spring.datasource.password=your_password
-
 spring.jpa.hibernate.ddl-auto=update
 ```
 
@@ -302,7 +312,6 @@ My Bookings
 * Daily Recurring Flights
 * Payment Gateway Integration
 
-
 ---
 
 ## 👨‍💻 Author
@@ -312,7 +321,5 @@ My Bookings
 Java Full Stack Developer
 
 GitHub:
+
 https://github.com/kartikchauhan0000/skybook-airline-system
-
-
-
